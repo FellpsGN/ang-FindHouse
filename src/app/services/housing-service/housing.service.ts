@@ -20,4 +20,8 @@ export class HousingService {
           return housingLocation.id === id;
         })
   }
+
+  submitApplication(firstName: string, lastName: string, email: string) {
+    console.log(firstName,lastName,email);
+  }
 }
