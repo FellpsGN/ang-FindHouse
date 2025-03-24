@@ -10,3 +10,8 @@
   .content {
     padding: var(--content-padding);
   }
+
+  .brand-name {
+    display: flex;
+    align-items: center;
+  }

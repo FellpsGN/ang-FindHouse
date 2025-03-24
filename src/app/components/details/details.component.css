@@ -1,0 +1,102 @@
+/* Variáveis (adicione no :root) */
+:root {
+  --primary-color: #007BFF;
+  --primary-dark-color: #0056b3;
+  --secondary-color: #6c757d;
+}
+
+/* Card Horizontal */
+article {
+  display: flex;
+  max-width: 58rem;               /* 1000px */
+  margin: 2rem auto;
+  background: white;
+  border-radius: 2rem;
+  box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+article:hover {
+  transform: translateY(-0.5rem);
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.2);
+}
+
+.listing-photo {
+  width: 50%;
+  min-height: 30rem;              /* Opcional: altura mínima */
+  object-fit: cover;
+  object-position: center;
+}
+
+.content-details {
+  width: 50%;
+  padding: 2rem;
+  font-size: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+/* Tipografia */
+.listing-heading {
+  font-size: 2.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.listing-location {
+  font-size: 1.6rem;
+  color: #555;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.listing-location::before {
+  content: url('/location-pin.svg');
+  display: inline-block;
+  width: 1.6rem;
+}
+
+.section-heading {
+  font-size: 2rem;
+  color: var(--secondary-color);
+  margin-bottom: 1rem;
+}
+
+.listing-features li {
+  font-size: 1.4rem;
+  margin-bottom: 0.8rem;
+}
+
+li {
+  list-style: none;
+}
+
+/* Botão */
+button.primary {
+  background: #6b2ff7;
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 0.4rem;
+  font-size: 1.4rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button.primary:hover {
+  background: #7940fd;
+}
+
+/* Responsividade (opcional) */
+@media (max-width: 768px) {
+  article {
+    flex-direction: column;
+  }
+  .listing-photo, .content-details {
+    width: 100%;
+  }
+}
